@@ -2,7 +2,7 @@
 public class Main {
 
 	public static void main(String[] args) {
-		// create some objetcts
+		// create some  objetcts
 		
 		Dog lassie = new Dog ("Lassie");
 		
