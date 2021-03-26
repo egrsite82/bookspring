@@ -2,17 +2,20 @@ package clinica;
 
 public class MyDate {
 	
+	//fields
 	private int day;
 	private int month;
 	private int year;
 	
-	
+	//constructor
 	public MyDate(int day, int month, int year) {
 		super();
 		this.day = day;
 		this.month = month;
 		this.year = year;
 	}
+	
+	//getters and setter
 	public int getDay() {
 		return day;
 	}
@@ -32,7 +35,7 @@ public class MyDate {
 		this.year = year;
 	}
 	
-	
+	//method earlier
 	public boolean earlier(MyDate compared) {
 		// first we'll compare years
 		if (this.year < compared.year) {
@@ -52,7 +55,7 @@ public class MyDate {
 		return false;
 	}
 	
-	
+	//toString
 	@Override
 	public String toString() {
 		return "MyDate is this : day=" + day + ", month=" + month + ", year=" +  year;
