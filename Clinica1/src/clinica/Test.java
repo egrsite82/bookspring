@@ -112,12 +112,22 @@ public class Test {
 		 people.add(jose);
 		 people.add(laia);
 		 people.add(boris);
+		 people.add(new Student ("Joan Sales", 1, 5, 1931, 2021, 600));
 		
-		// Utilities.printList(people);
-		 Utilities.printListExtended(people);
+		 //Utilities.printList(people);
+		// Utilities.printListExtended(people);
 		 
 		 
+		 Person[] peopleClassicArray = new Person[6];
+		 peopleClassicArray[0] = jose;
+		 peopleClassicArray[1] = laia;
+		 peopleClassicArray[2] = new Student ("Pau Lopez",10 , 8, 1995, 2020, 650);
+		 peopleClassicArray[3] = new Person ("Steven Clay", 3, 2, 1978);
+		 peopleClassicArray[4] = new Person ("Sebastian Bruno", new MyDate(15, 6, 1988));
+		 peopleClassicArray[5] = new Person ("Carlos Guzman", new MyDate (5,5,1986));
 		 
+		 
+		 Utilities.printListExtendedClassicArray(peopleClassicArray);
 		 
 		 
 		 

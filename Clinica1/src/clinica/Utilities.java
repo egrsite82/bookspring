@@ -29,4 +29,13 @@ public class Utilities {
 			}
 
 	}
+	
+	public static void printListExtendedClassicArray(Person[] people) {
+		System.out.println("People");
+		System.out.println("------------------------------------------------------------");
+		
+		for (Person person : people) {
+			System.out.println(person);
+		}
+	}
 }
