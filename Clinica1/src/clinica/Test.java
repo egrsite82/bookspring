@@ -92,10 +92,11 @@ public class Test {
 		 laia.addCourse(javase);
 		 laia.addCourse(javaee);
 		 laia.addCourse(javaspring);
-		 			 
+		 		
+
 		 
 		 laia.setBasicSalary(450);
-		 Student dani = new Student();
+		 
 		 
 		 
 		 Person jose = new Person("José Espejo", 1,1,1950);
@@ -111,7 +112,7 @@ public class Test {
 		 people.add(jose);
 		 people.add(laia);
 		 people.add(boris);
-		 people.add(dani);
+		
 		// Utilities.printList(people);
 		 Utilities.printListExtended(people);
 		 
