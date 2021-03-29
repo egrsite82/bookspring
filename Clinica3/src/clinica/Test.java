@@ -3,9 +3,8 @@ package clinica;
 import java.util.ArrayList;
 
 public class Test {
-	
-	
-	 public static void testObjects() {
+		
+	 public static void testObjectsPerson() {
 	  
 	  // create an object: instantiate 
 	 Person jose = new Person("José Espejo", 1,1,1950);
@@ -27,7 +26,7 @@ public class Test {
 	  System.out.println(quiron);
 	  
 	  }
-	 	
+	 		
 	 public static void testConstructorMethod() {
 		
 		//from Person we create an object called Toni with a static method which call
@@ -47,7 +46,6 @@ public class Test {
 		
 	}
 
-	 //to test student branch from Person
 	 public static void testObjectsStudent() {
 		 
 		 //without teacher so far
@@ -56,7 +54,7 @@ public class Test {
 		 Course javaspring = new Course("Java Spring Boot", 180, 2021);
 		 Course jpa = new Course("Java Persistence Api", 80, 2021);
 		 
-		 Student laia = new Student ("Laia Gomis",3, 2, 1859, 2020, 300  );
+		 Student laia = new Student ("Laia Miramunt", 3, 2, 1985, 2020, 550);
 		 
 		 System.out.println("\n" + laia);
 		 
@@ -67,20 +65,16 @@ public class Test {
 		 
 		 System.out.println("\n" + laia);
 		 
+		 
 		 laia.setBasicSalary(450);
 		 
 		 System.out.println("\n" + laia);
 		 
 	 }
 	 
-	 //to test employee branch from Person (employee, teacher and doctor)
 	 public static void testUtilitiesInherence() {
 		 
-		 Employee boris = new Employee("Borislav", 5,5,1990, 400, 550 );
-		 
-		 //System.out.println("\n" + boris);
-		 
-		 //without teacher so far
+		//without teacher so far
 		 Course javase = new Course("Java Standard Edition", 100, 2021);
 		 Course javaee = new Course("Java Enterprise Edition", 150, 2021);
 		 Course javaspring = new Course("Java Spring Boot", 180, 2021);
@@ -95,51 +89,78 @@ public class Test {
 		 			 
 		 
 		 laia.setBasicSalary(450);
-		 Student dani = new Student();
-		 
-		 
+		 				 
 		 Person jose = new Person("José Espejo", 1,1,1950);
-		 
-		 jose.setBasicSalary(1200);
-		 
 		    
 		 jose.setWeight(180);
 		 jose.setHeight(180);
-		 
+		
 		 ArrayList<Person> people = new ArrayList<Person>();
 		 
 		 people.add(jose);
 		 people.add(laia);
-		 people.add(boris);
-		 people.add(dani);
-		// Utilities.printList(people);
-		 Utilities.printListExtended(people);
+		 			 
+		 //Utilities.printList(people);
+		 //Utilities.printListExtended(people);
 		 
 		 
+		 Person[] peopleClassicArray = new Person[5];
+		 peopleClassicArray[0] = jose;
+		 peopleClassicArray[1] = laia;
+		 peopleClassicArray[2] = new Student ("Pau Lopez",10 , 8, 1995, 2020, 650);
+		 peopleClassicArray[3] = new Person ("Steven Clay", 3, 2, 1978);
+		 peopleClassicArray[4] = new Person ("Sebastian Bruno", new MyDate(15, 6, 1988));
 		 
 		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
-		 
+		 Utilities.printListExtendedClassicArray(peopleClassicArray);
 		 
 		 
 		 
 		 
 	 }
+
+	 public static void testObjectsCourse() {
+		 
+		 
+		 Course javase = new Course("Java Standard Edition", 100, 2021);
+		 Course javaee = new Course("Java Enterprise Edition", 150, 2021);
+		 Course javaspring = new Course("Java Spring Boot", 180, 2021);
+		 Course jpa = new Course("Java Persistence Api", 80, 2021);
+		 
+		
+		 
+		 
+		 Person jason = new Teacher("Jason Lagrange", 27,  02, 1972, 350, 400, 250);
+		 
+		 //can't be
+		 //jpa.setTeacher(jason);
+		 
+		 // can't be, just there is not a method addCourse in Person ... 
+		 //At Compilation time running environment jre or jdk looks for reference variable (tag) methods
+		 //but at Execution time running environment jre or jdk looks for OBJECTS methods
+		 //jason.addCourse(jpa);
+		 
+		 //so we need to cast the tag to be ABLE to call addCourse
+		 Teacher jasonTeacher = (Teacher) jason;
+		 //https://www.javaer101.com/en/article/3167045.html
+		 //jpa.setTeacher(jasonTeacher);
+		 
+		 
+		 jasonTeacher.addCourse(javase);
+		 jasonTeacher.addCourse(javaee);
+		 jasonTeacher.addCourse(javaspring);
+		 jasonTeacher.addCourse(jpa);
+		 
+		 //both reference variables TAGS point the same object
+		 //if not MAY test with	EQUALS
+		 System.out.println(jason + "\n");
+		 System.out.println(jasonTeacher + "\n");
+		 
+		 //to test add a teacher to course
+		 //https://www.javaer101.com/en/article/3167045.html
+		 Course sqlManytoMany = new Course("JPA many to many relashionship causing infinite recursion", 10, 2021);
+		 sqlManytoMany.setTeacher(jasonTeacher);
+		 
+	 }
+
 }
- 
