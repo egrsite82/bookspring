@@ -13,17 +13,17 @@ public class MainApplication {
 			
 	    while (true) {
 	    	
-	    	//our menu and I/0 system
+	    	//our menu and I/0 system, that is view
 	    	String command = menuView(reader);
 	        	               
-	        
+	        //our controller, handle operations and request,
+	    	//deliver responses, handle traffic and events
 	        int resultOperation = controller(command);
 	        
 	        if (resultOperation == 0) break;
 	        
 	    }
 	
-	    
 		reader.close();
 	   	System.out.println("finishing ....\n" + "\n");
 
