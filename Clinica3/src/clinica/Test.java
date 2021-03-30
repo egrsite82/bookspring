@@ -162,5 +162,8 @@ public class Test {
 		 sqlManytoMany.setTeacher(jasonTeacher);
 		 
 	 }
+	 
+	 
+	 public static void testClinicaMembersArray() {}
 
 }

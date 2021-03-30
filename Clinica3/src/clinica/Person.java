@@ -26,7 +26,9 @@ public class Person {
 	private int weight;
 	//composition relationship
 	private MyDate birthMyDate;
-	//change visibility to private to see what happen
+	//be careful with private
+		//change visibility from private to protected
+		//to grant access to this field from other classes
 	protected double basicSalary;
 	
 	//default constructor

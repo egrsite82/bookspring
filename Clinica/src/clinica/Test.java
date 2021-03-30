@@ -2,7 +2,8 @@ package clinica;
 
 public class Test {
 	
-	
+	//let's create and test some objects Person and Clinica
+	//and add Person Jose to Clinica as a Member
 	 public static void testObjects() {
 	  
 	  // create an object: instantiate 
@@ -26,7 +27,11 @@ public class Test {
 	  
 	  }
 	 
-		
+	//let's create and test some objects Person with the
+	//same ORDER arguments which may cause trouble at constructor
+	//so we will create two methods which will call the constructor
+	//and return and Person object
+	//so: call method > method > call constructor > create object > method return object
 	 public static void testConstructorMethod() {
 		
 		//from Person we create an object called Toni with a static method which call

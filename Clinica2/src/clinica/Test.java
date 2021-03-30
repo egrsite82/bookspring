@@ -4,9 +4,11 @@ import java.util.ArrayList;
 
 public class Test {
 		
+	 //let's create and test some objects Person and Clinica
+	 //and add Person Jose to Clinica as a Member
 	 public static void testObjectsPerson() {
 	  
-	  // create an object: instantiate 
+	 //create an object: instantiate 
 	 Person jose = new Person("José Espejo", 1,1,1950);
 	  
 	  
@@ -26,19 +28,24 @@ public class Test {
 	  System.out.println(quiron);
 	  
 	  }
-	 		
+
+	 //let's create and test some objects Person with the
+	 //same ORDER arguments which may cause trouble at constructor
+	 //so we will create two methods which will call the constructor
+	 //and return and Person object
+	 //so: call method > method > call constructor > create object > method return object
 	 public static void testConstructorMethod() {
 		
 		//from Person we create an object called Toni with a static method which call
-		  // to the REAL constructor
-		  Person toni =  Person.personConstructorAge("Toni Lopez", 18, 1,1,1980);
+		// to the REAL constructor
+		Person toni =  Person.personConstructorAge("Toni Lopez", 18, 1,1,1980);
 		
-		  Person laura = Person.personConstructorWeigth("Laura Gasol", 60, 1,7,1992);
+		Person laura = Person.personConstructorWeigth("Laura Gasol", 60, 1,7,1992);
 		
 		 
-		 //object without tag, that is reference variable and thus I cant call this object
-		  //this object will be an lost object
-		  //this is a very BAD IDEA we are creating a zombie
+		//object without tag, that is reference variable and thus I cant call this object
+		//this object will be an lost object
+		//this is a very BAD IDEA we are creating a zombie
 		//Person.personConstructorAge("Toni Lopez", 18, 1,1,1980);
 		
 		System.out.println(laura);
@@ -46,6 +53,8 @@ public class Test {
 		
 	}
 
+	 //let's create and test some student and Course Objects
+	 //and add these courses to that student at courses ArrayList student's field
 	 public static void testObjectsStudent() {
 		 
 		 //without teacher so far
@@ -72,9 +81,17 @@ public class Test {
 		 
 	 }
 	 
+	 //let's create and test the inherence structure
+	 //person > student  and person > employee
+	 //and create new Class Utilities to home print utilities
+	 //so we may study how array Person got all kind of objects
 	 public static void testUtilitiesInherence() {
 		 
-		//without teacher so far
+		 Employee boris = new Employee("Borislav", 5,5,1990, 400, 550 );
+		 
+		 System.out.println("\n" + boris);
+		 
+		 //without teacher so far
 		 Course javase = new Course("Java Standard Edition", 100, 2021);
 		 Course javaee = new Course("Java Enterprise Edition", 150, 2021);
 		 Course javaspring = new Course("Java Spring Boot", 180, 2021);
@@ -86,30 +103,34 @@ public class Test {
 		 laia.addCourse(javase);
 		 laia.addCourse(javaee);
 		 laia.addCourse(javaspring);
-		 			 
-		 
+		 		
 		 laia.setBasicSalary(450);
-		 				 
+		 
 		 Person jose = new Person("José Espejo", 1,1,1950);
+		 
+		 jose.setBasicSalary(1200);
 		    
 		 jose.setWeight(180);
 		 jose.setHeight(180);
-		
+		 
 		 ArrayList<Person> people = new ArrayList<Person>();
 		 
 		 people.add(jose);
 		 people.add(laia);
-		 			 
-		 //Utilities.printList(people);
-		 //Utilities.printListExtended(people);
+		 people.add(boris);
+		 people.add(new Student ("Joan Sales", 1, 5, 1931, 2021, 600));
+		
+		 Utilities.printList(people);
+		 Utilities.printListExtended(people);
 		 
 		 
-		 Person[] peopleClassicArray = new Person[5];
+		 Person[] peopleClassicArray = new Person[6];
 		 peopleClassicArray[0] = jose;
 		 peopleClassicArray[1] = laia;
 		 peopleClassicArray[2] = new Student ("Pau Lopez",10 , 8, 1995, 2020, 650);
 		 peopleClassicArray[3] = new Person ("Steven Clay", 3, 2, 1978);
 		 peopleClassicArray[4] = new Person ("Sebastian Bruno", new MyDate(15, 6, 1988));
+		 peopleClassicArray[5] = new Employee ("Carlos Guzman", 10 , 4, 1975, 425, 635);
 		 
 		 
 		 Utilities.printListExtendedClassicArray(peopleClassicArray);
@@ -119,16 +140,15 @@ public class Test {
 		 
 	 }
 
+	 //let's create and test some teacher and course objects
+	 //to study casting and how reference variable and object work
+	 //at compilation time and running time
 	 public static void testObjectsCourse() {
-		 
-		 
+		 		 
 		 Course javase = new Course("Java Standard Edition", 100, 2021);
 		 Course javaee = new Course("Java Enterprise Edition", 150, 2021);
 		 Course javaspring = new Course("Java Spring Boot", 180, 2021);
 		 Course jpa = new Course("Java Persistence Api", 80, 2021);
-		 
-		
-		 
 		 
 		 Person jason = new Teacher("Jason Lagrange", 27,  02, 1972, 350, 400, 250);
 		 

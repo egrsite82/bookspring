@@ -12,6 +12,8 @@ public class MainApplication {
 			
 	    while (true) {
 	    	
+	    	//In MVR pattern design this lines are considered the View tier
+	    	//so we collect some data and show results to user
 	    	System.out.println("\nChoose one option ...");
 	    	System.out.println("0 - Quit");
 	    	System.out.println("1 - test Objects Person ");
@@ -24,6 +26,10 @@ public class MainApplication {
 	        String command = reader.nextLine();
 	        Utilities.clear();
 	
+	        
+	        //In MVR pattern design this lines are considered the Controller tier
+	    	//so we collect the requests at front controller and deliver them to
+	        //where they will be processed, in our case static methods at Test Class
 	        if (command.equals("0")) {
 	            break;
 	        } else if (command.equals("1")) {
@@ -36,6 +42,8 @@ public class MainApplication {
 	        	Test.testUtilitiesInherence();
 	        } else if (command.equals("5")) {
 	        	Test.testObjectsCourse();
+	        } else if (command.equals("6")) {
+	        	Test.testClinicaMembersArray();
 	        } else {
 	        	System.out.println("Unknown command!");
 	        }
