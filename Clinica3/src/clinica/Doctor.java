@@ -49,7 +49,8 @@ public class Doctor extends Employee {
 	}
 	@Override
 	public String toString() {
-		return "Doctor [speciality=" + speciality + ", salaryAsDoctor=" + this.getSalary() + "]";
+		return "Doctor [speciality=" + speciality + ", salaryAsDoctor=" + this.getSalary() + "]\n"+
+				this.getName();
 	}
 	
 	

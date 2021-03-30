@@ -21,6 +21,7 @@ public class MainApplication {
 	    	System.out.println("3 - test Object Student");
 	    	System.out.println("4 - test Utilities Inherence Class Person");
 	    	System.out.println("5 - test Objects Course: Teacher/Student");
+	    	System.out.println("6 - test Clinica Members Array");
 	    	
 	    	System.out.println("\noption? ");
 	        String command = reader.nextLine();

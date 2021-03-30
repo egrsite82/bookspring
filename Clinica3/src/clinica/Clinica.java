@@ -47,7 +47,7 @@ public class Clinica {
 		if (isAccepted(personToAddtoMembers))
 		{   
 	        this.members.add(personToAddtoMembers);
-			System.out.println("added");}
+			System.out.println(personToAddtoMembers.getName()+ " added as a Member of " + this.getName());}
 		
 		else {
 			

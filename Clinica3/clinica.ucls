@@ -1,99 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <class-diagram version="1.2.4" icons="true" always-add-relationships="false" generalizations="true" realizations="true" 
   associations="true" dependencies="false" nesting-relationships="true" router="FAN">  
-  <class id="1" language="java" name="clinica.Student" project="Clinica2" file="/Clinica2/src/clinica/Student.java" 
+  <class id="1" language="java" name="clinica.Employee" project="Clinica3" file="/Clinica3/src/clinica/Employee.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="369" width="205" x="111" y="1071"/>    
+    <position height="-1" width="-1" x="148" y="769"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="2" language="java" name="clinica.Employee" project="Clinica2" file="/Clinica2/src/clinica/Employee.java" 
-    binary="false" corner="BOTTOM_RIGHT">    
-    <position height="243" width="220" x="537" y="1071"/>    
+  <class id="2" language="java" name="clinica.MainApplication" project="Clinica3" 
+    file="/Clinica3/src/clinica/MainApplication.java" binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="126" y="109"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="3" language="java" name="clinica.Clinica" project="Clinica2" file="/Clinica2/src/clinica/Clinica.java" 
+  <class id="3" language="java" name="clinica.Doctor" project="Clinica3" file="/Clinica3/src/clinica/Doctor.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="333" width="221" x="111" y="-17"/>    
+    <position height="-1" width="-1" x="147" y="1169"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="4" language="java" name="clinica.MainApplication" project="Clinica2" 
-    file="/Clinica2/src/clinica/MainApplication.java" binary="false" corner="BOTTOM_RIGHT">    
-    <position height="99" width="114" x="372" y="-17"/>    
+  <class id="4" language="java" name="clinica.MyDate" project="Clinica3" file="/Clinica3/src/clinica/MyDate.java" 
+    binary="false" corner="BOTTOM_RIGHT">    
+    <position height="-1" width="-1" x="1060" y="890"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="5" language="java" name="clinica.MyDate" project="Clinica2" file="/Clinica2/src/clinica/MyDate.java" 
+  <class id="5" language="java" name="clinica.Student" project="Clinica3" file="/Clinica3/src/clinica/Student.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="279" width="141" x="356" y="1071"/>    
+    <position height="-1" width="-1" x="646" y="806"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="6" language="java" name="clinica.Teacher" project="Clinica2" file="/Clinica2/src/clinica/Teacher.java" 
+  <class id="6" language="java" name="clinica.Clinica" project="Clinica3" file="/Clinica3/src/clinica/Clinica.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="369" width="248" x="403" y="1835"/>    
+    <position height="-1" width="-1" x="466" y="377"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="7" language="java" name="clinica.Course" project="Clinica2" file="/Clinica2/src/clinica/Course.java" 
+  <class id="7" language="java" name="clinica.Teacher" project="Clinica3" file="/Clinica3/src/clinica/Teacher.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="166" x="310" y="1480"/>    
+    <position height="-1" width="-1" x="489" y="1219"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="8" language="java" name="clinica.Doctor" project="Clinica2" file="/Clinica2/src/clinica/Doctor.java" 
+  <class id="8" language="java" name="clinica.Utilities" project="Clinica3" file="/Clinica3/src/clinica/Utilities.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="315" width="206" x="537" y="1480"/>    
+    <position height="-1" width="-1" x="191" y="246"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="9" language="java" name="clinica.Utilities" project="Clinica2" file="/Clinica2/src/clinica/Utilities.java" 
+  <class id="9" language="java" name="clinica.Course" project="Clinica3" file="/Clinica3/src/clinica/Course.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="135" width="243" x="526" y="-17"/>    
+    <position height="-1" width="-1" x="796" y="1226"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="10" language="java" name="clinica.Person" project="Clinica2" file="/Clinica2/src/clinica/Person.java" 
+  <class id="10" language="java" name="clinica.Person" project="Clinica3" file="/Clinica3/src/clinica/Person.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="675" width="279" x="278" y="356"/>    
+    <position height="-1" width="-1" x="942" y="373"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
       <operations public="true" package="true" protected="true" private="true" static="true"/>    
     </display>  
   </class>  
-  <class id="11" language="java" name="clinica.Test" project="Clinica2" file="/Clinica2/src/clinica/Test.java" 
+  <class id="11" language="java" name="clinica.Test" project="Clinica3" file="/Clinica3/src/clinica/Test.java" 
     binary="false" corner="BOTTOM_RIGHT">    
-    <position height="171" width="167" x="809" y="-17"/>    
+    <position height="-1" width="-1" x="155" y="439"/>    
     <display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
       sort-features="false" accessors="true" visibility="true">      
       <attributes public="true" package="true" protected="true" private="true" static="true"/>      
@@ -101,62 +101,61 @@
     </display>  
   </class>  
   <association id="12">    
-    <end type="SOURCE" refId="6" navigable="false">      
+    <end type="SOURCE" refId="7" navigable="false">      
       <attribute id="13" name="courses"/>      
       <multiplicity id="14" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <generalization id="15">    
+    <end type="SOURCE" refId="5"/>    
+    <end type="TARGET" refId="10"/>  
+  </generalization>  
+  <generalization id="16">    
+    <end type="SOURCE" refId="3"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <generalization id="17">    
+    <end type="SOURCE" refId="7"/>    
+    <end type="TARGET" refId="1"/>  
+  </generalization>  
+  <association id="18">    
+    <end type="SOURCE" refId="5" navigable="false">      
+      <attribute id="19" name="courses"/>      
+      <multiplicity id="20" minimum="0" maximum="2147483647"/>    
+    </end>    
+    <end type="TARGET" refId="9" navigable="true"/>    
+    <display labels="true" multiplicity="true"/>  
+  </association>  
+  <association id="21">    
+    <end type="SOURCE" refId="9" navigable="false">      
+      <attribute id="22" name="teacher"/>      
+      <multiplicity id="23" minimum="0" maximum="1"/>    
     </end>    
     <end type="TARGET" refId="7" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="15">    
-    <end type="SOURCE" refId="8"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
-  <association id="16">    
-    <end type="SOURCE" refId="10" navigable="false">      
-      <attribute id="17" name="birthMyDate"/>      
-      <multiplicity id="18" minimum="0" maximum="1"/>    
-    </end>    
-    <end type="TARGET" refId="5" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="19">    
+  <generalization id="24">    
     <end type="SOURCE" refId="1"/>    
     <end type="TARGET" refId="10"/>  
   </generalization>  
-  <association id="20">    
-    <end type="SOURCE" refId="7" navigable="false">      
-      <attribute id="21" name="teacher"/>      
-      <multiplicity id="22" minimum="0" maximum="1"/>    
+  <association id="25">    
+    <end type="SOURCE" refId="10" navigable="false">      
+      <attribute id="26" name="birthMyDate"/>      
+      <multiplicity id="27" minimum="0" maximum="1"/>    
     </end>    
-    <end type="TARGET" refId="6" navigable="true"/>    
+    <end type="TARGET" refId="4" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <generalization id="23">    
-    <end type="SOURCE" refId="2"/>    
-    <end type="TARGET" refId="10"/>  
-  </generalization>  
-  <association id="24">    
-    <end type="SOURCE" refId="3" navigable="false">      
-      <attribute id="25" name="members"/>      
-      <multiplicity id="26" minimum="0" maximum="2147483647"/>    
+  <association id="28">    
+    <end type="SOURCE" refId="6" navigable="false">      
+      <attribute id="29" name="members"/>      
+      <multiplicity id="30" minimum="0" maximum="2147483647"/>    
     </end>    
     <end type="TARGET" refId="10" navigable="true"/>    
     <display labels="true" multiplicity="true"/>  
   </association>  
-  <association id="27">    
-    <end type="SOURCE" refId="1" navigable="false">      
-      <attribute id="28" name="courses"/>      
-      <multiplicity id="29" minimum="0" maximum="2147483647"/>    
-    </end>    
-    <end type="TARGET" refId="7" navigable="true"/>    
-    <display labels="true" multiplicity="true"/>  
-  </association>  
-  <generalization id="30">    
-    <bendpoint x="506" y="1480"/>    
-    <end type="SOURCE" refId="6"/>    
-    <end type="TARGET" refId="2"/>  
-  </generalization>  
   <classifier-display autosize="true" stereotype="true" package="true" initial-value="false" signature="true" 
     sort-features="false" accessors="true" visibility="true">    
     <attributes public="true" package="true" protected="true" private="true" static="true"/>    
