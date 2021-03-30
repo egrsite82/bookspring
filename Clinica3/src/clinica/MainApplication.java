@@ -56,6 +56,7 @@ public class MainApplication {
 		//Test.testObjectsStudent();
 		//Test.testUtilitiesInherence();
 		//Test.testObjectsCourse();
+	    //Test.testClinicaMembersArray();
 	    
 		reader.close();
 	    
