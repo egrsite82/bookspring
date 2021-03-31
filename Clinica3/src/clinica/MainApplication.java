@@ -1,6 +1,5 @@
 package clinica;
 
-
 import java.util.Scanner;
 
 public class MainApplication {
@@ -30,7 +29,7 @@ public class MainApplication {
 	}
 	
 	//MVC >>> view
-	public static String menuView (Scanner reader) {
+	private static String menuView (Scanner reader) {
 		//In MVR pattern design this lines are considered the View tier
     	//so we collect some data and show results to user
     	System.out.println("\nChoose one option ...");
@@ -51,7 +50,7 @@ public class MainApplication {
 	}
 	
 	//MVC >>> controller
-	public static int controller (String command) {
+	private static int controller (String command) {
 		
 		int resultOperation = -1;
 		
@@ -82,6 +81,7 @@ public class MainApplication {
 		
 		return resultOperation;
 	}
-	
 
 }
+
+
