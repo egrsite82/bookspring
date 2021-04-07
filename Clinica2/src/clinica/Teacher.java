@@ -13,7 +13,9 @@ public class Teacher extends Employee{
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public Teacher(String name, int day, int month, int year, double basicSalary, double salaryEmployee,double paymentPerCourse) {
+	
+	public Teacher(String name, int day, int month, int year,
+			double basicSalary, double salaryEmployee,double paymentPerCourse) {
 		super(name, day, month, year, basicSalary, salaryEmployee);
 		this.paymentPerCourse = paymentPerCourse;
 		this.courses = new ArrayList<Course>();
@@ -33,8 +35,7 @@ public class Teacher extends Employee{
 	}
 	
 	@Override
-	public double getSalary () {
-			
+	public double getSalary () {	
 		return this.getSalaryAsTeacher() + basicSalary + salaryEmployee;
 	}
 	
@@ -75,7 +76,8 @@ public class Teacher extends Employee{
 				+ "\n number of courses: " + this.getCourses().size()
 				+ "\n [courses=" + courses + " ]"
 				+ "\n paymentPerCourse: " + paymentPerCourse
-				+ "\n salaryAsTeacher: " + this.getSalary();
+				+ "\n salaryAsTeacher: " + paymentPerCourse * this.getCourses().size()
+				+ "\n salary Total: " + this.getSalary();
 	}
 	
 	

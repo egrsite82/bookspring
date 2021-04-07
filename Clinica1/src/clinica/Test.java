@@ -114,6 +114,7 @@ public class Test {
 		 
 		 
 		 Person[] peopleClassicArray = new Person[6];
+		 
 		 peopleClassicArray[0] = jose;
 		 peopleClassicArray[1] = laia;
 		 peopleClassicArray[2] = new Student ("Pau Lopez",10 , 8, 1995, 2020, 650);
