@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org">
+
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+
+<body>
+
+			
+		<table class="w3-table-all w3-hoverable">
+
+			
+
+			<tr th:each="book:${booksfromController}">
+			
+				<td th:text="${book.title}"></td>
+				<td th:text="${book.ISBN}"></td>
+				<td th:text="${book.pages}"></td>
+				<td th:text="${book.year}"></td>
+				<td th:text="${book.author}"></td>
+
+			</tr>
+		</table>
+
+</html>
