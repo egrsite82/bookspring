@@ -5,14 +5,11 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
-
 <body>
-
+<h1>Spring boot books exemple</h1>
+<h3>table of static books</h3>
 			
-		<table class="w3-table-all w3-hoverable">
-
-			
-
+		<table class="w3-table-all w3-hoverable" >
 			<tr th:each="book:${booksfromController}">
 			
 				<td th:text="${book.title}"></td>
@@ -20,8 +17,21 @@
 				<td th:text="${book.pages}"></td>
 				<td th:text="${book.year}"></td>
 				<td th:text="${book.author}"></td>
-
+			</tr>
+		</table>
+</Br>			
+<h3>table of fake books</h3>	
+		
+		<table class="w3-table-all w3-hoverable" >
+			<tr th:each="book:${fakebooksfromController}">
+				<td th:text="${book.title}"></td>
+				<td th:text="${book.ISBN}"></td>
+				<td th:text="${book.pages}"></td>
+				<td th:text="${book.year}"></td>
+				<td th:text="${book.author}"></td>
 			</tr>
 		</table>
 
 </html>
+
+
