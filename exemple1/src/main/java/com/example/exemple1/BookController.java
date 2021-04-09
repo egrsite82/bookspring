@@ -5,9 +5,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.RequestMapping;
 
-
-
-
 @Controller
 @RequestMapping("/books")
 public class BookController {
@@ -15,8 +12,6 @@ public class BookController {
 	
 @Autowired
 BookService	bookService;
-	
- 	
 	
 	@RequestMapping("/allbooks")
 	public String showAllBooks(Model containerToView) {
@@ -26,8 +21,6 @@ BookService	bookService;
 		
 		return "library";
 	}
-	
-	
 	
 
 }

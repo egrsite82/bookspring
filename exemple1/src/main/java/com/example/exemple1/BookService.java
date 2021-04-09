@@ -11,6 +11,7 @@ public class BookService {
 
 	static List<Book> books = new ArrayList<Book>();
 	static List<Book> fakebooks = new ArrayList<Book>();
+	
 	static {
 		Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
 		Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
@@ -31,11 +32,10 @@ public class BookService {
 	}
 
 	public List<Book> queryFakeBooks() {
-
 		
-
 		int i = 0;
 		Faker newfakebook = new Faker();
+		
 		while (i < 10000) {
 
 			String author = newfakebook.book().author();
