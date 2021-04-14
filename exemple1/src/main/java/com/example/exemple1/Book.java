@@ -1,5 +1,6 @@
 package com.example.exemple1;
 
+
 public class Book {
 
 	private String title;
@@ -67,5 +68,13 @@ public class Book {
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
+	@Override
+	public String toString() {
+		return "Book [title=" + title + ", ISBN=" + ISBN + ", pages=" + pages + ", year=" + year + ", author=" + author
+				+ "]";
+	}
+	
+	
 
 }

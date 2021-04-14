@@ -49,6 +49,15 @@ public class BookService {
 		return fakebooks;
 	}
 
+	public boolean queryAddBook (Book newbooktoadd) {
+		
+		this.books.add(newbooktoadd);
+		
+		
+		return true;
+		
+	}
+	
 	public int getRandomNumber(int min, int max) {
 		return (int) ((Math.random() * (max - min)) + min);
 	}
