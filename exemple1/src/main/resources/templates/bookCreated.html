@@ -9,11 +9,28 @@
 <body>
 <h1>book created!!!</h1>
 
+<table style="width:80%">
+  <tr class="w3-light-grey">
+    <th>serverTime</th>
+    <th>message</th>
+    <th>bookCreated</th>
+    <th>bookCreatedasObject.title</th>
+    <th>bookCreatedasObject.author</th>
+    <th>bookCreatedasObject</th>
+  </tr>
+  <tr class="w3-light-white">
+    <td><p th:text="${serverTime}" /></p></td>
+    <td><p th:text="${message}"></p></td>
+    <td><p th:text="${bookCreated}"></p></td>
+    <td><p th:text="${bookCreatedasObject.title}"></p></td>
+    <td><p th:text="${bookCreatedasObject.author}"></p></td>
+    <td><p th:text="${bookCreatedasObject}"></p></td>
+  </tr>
+  
+</table>
 
-<p th:text="${bookCreated}"></p>
-<p th:text="${bookCreatedasObject.title}"></p>
-<p th:text="${bookCreatedasObject.author}"></p>
-<p th:text="${bookCreatedasObject}"></p>
+
+ <a th:href="@{/books/allbooks}">Library</a>
 
 </body>
 </html>

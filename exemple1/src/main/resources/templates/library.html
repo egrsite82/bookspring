@@ -20,8 +20,10 @@
 				<td th:text="${book.author}"></td>
 			</tr>
 		</table>
-</Br>			
-<h3>table of fake books</h3>	
+</Br>
+
+ <a th:href="@{/books/newBook}">Add new book</a>			
+<!-- <h3>table of fake books</h3>	
 		
 		<table class="w3-table-all w3-hoverable" >
 			<tr th:each="book:${fakebooksfromController}">
@@ -31,7 +33,7 @@
 				<td th:text="${book.year}"></td>
 				<td th:text="${book.author}"></td>
 			</tr>
-		</table>
+		</table> -->
 
 </html>
 

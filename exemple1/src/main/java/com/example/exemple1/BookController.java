@@ -1,5 +1,7 @@
 package com.example.exemple1;
 
+import java.util.Date;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
@@ -43,7 +45,10 @@ public class BookController {
 	  String stringtosend = book.getTitle() + " - " + book.getAuthor();
 	  model.addAttribute("bookCreated", stringtosend);
 	  model.addAttribute("bookCreatedasObject", book);
+	
+	  model.addAttribute("serverTime", new Date());
 	  
+	 
 	  
 	  return "bookCreated"; }
 	 
