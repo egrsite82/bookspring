@@ -21,9 +21,11 @@ public class BookRestController {
 	}
 	
 	@PostMapping(path="/addBook", consumes="application/json")
-	public void  insertBook(@RequestBody Book book) {
+	public void insertBook(@RequestBody Book book) {
 		
 		 bookService.queryAddBook(book);
+		 
+
 	}
 
 }
