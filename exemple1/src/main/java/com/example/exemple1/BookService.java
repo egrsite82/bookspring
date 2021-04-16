@@ -18,11 +18,13 @@ public class BookService {
 		Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
 		Book book4 = new Book("Orlando", "yuplA15-340112", 356, 1926, "Virginia Wolf");
 		Book book5 = new Book("Programming", "RETEWRT-340112", 356, 1926, "Engelbert");
+		Book book6 = new Book("Programming api rest", "4564564564646", 356, 1926, "Boris Omar");
 		books.add(book1);
 		books.add(book2);
 		books.add(book3);
 		books.add(book4);
 		books.add(book5);
+		books.add(book6);
 	}
 
 	public List<Book> queryBooks() {
