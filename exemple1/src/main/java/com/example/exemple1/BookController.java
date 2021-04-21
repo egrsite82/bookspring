@@ -1,6 +1,7 @@
 package com.example.exemple1;
 
 import java.util.Date;
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -15,6 +16,16 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 
+	/*
+	 * @RequestMapping("/createBooks") public String createBooks(Model model) {
+	 * 
+	 * 
+	 * model.addAttribute("booksfromController",bookService.fillArray());
+	 * 
+	 * return "library"; }
+	 */
+	
+	
 	@RequestMapping("/allbooks")
 	public String showAllBooks(Model containerToView) {
 
@@ -50,17 +61,17 @@ public class BookController {
 	  return "bookCreated"; }
 	 
 	@RequestMapping("/deleteBook")
-	public String removeBook( @RequestParam("titleFromView") String titleToDelete) {
+	public String removeBook( @RequestParam("titleFromView") String titleToDelete, Model model) {
 		
 		//call to service
 		System.out.println(titleToDelete);
 		
-		bookService.queryDeleteBook(titleToDelete);
+		List<Book>  booksUpdated = bookService.queryDeleteBook(titleToDelete);
 		
-		//model.addAttribute("booksfromController", bookService.queryBooks());
+		model.addAttribute("booksfromController", booksUpdated);
 		//System.out.println("array books in controller /n" +  bookService.queryBooks());
 		
-		return "bookDeleted";
+		return "library";
 	}
 	
 	

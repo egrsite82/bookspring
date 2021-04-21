@@ -11,8 +11,21 @@ public class BookService {
 
 	static List<Book> books = new ArrayList<Book>();
 	static List<Book> fakebooks = new ArrayList<Book>();
+		
+	static {Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
+	Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
+	Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
+	Book book4 = new Book("Orlando", "yuplA15-340112", 356, 1926, "Virginia Wolf");
+	Book book5 = new Book("Programming", "RETEWRT-340112", 356, 1926, "Engelbert");
+	Book book6 = new Book("Programming api rest", "4564564564646", 356, 1926, "Boris Omar");
+	books.add(book1);
+	books.add(book2);
+	books.add(book3);
+	books.add(book4);
+	books.add(book5);
+	books.add(book6);}
 	
-	static {
+	/*public List<Book> fillArray () {
 		Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
 		Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
 		Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
@@ -25,7 +38,10 @@ public class BookService {
 		books.add(book4);
 		books.add(book5);
 		books.add(book6);
-	}
+		
+		
+		return books;
+	}*/
 
 	public List<Book> queryBooks() {
 
@@ -51,19 +67,19 @@ public class BookService {
 		return fakebooks;
 	}
 	
-	public boolean queryDeleteBook (String title) {
+	public List<Book> queryDeleteBook (String title) {
 		
 		for(Book bookInArray : this.books) {
 
 			if( bookInArray.getTitle().equals(title)){			
 				this.books.remove(bookInArray);
-			
+				break;
 			}
 			
 			System.out.println("array books in service /n" + this.books);
 	
 		}
-	 return true;
+	 return books;
 	}
 
 	public boolean queryAddBook (Book newbooktoadd) {
