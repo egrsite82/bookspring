@@ -9,10 +9,10 @@ import com.github.javafaker.Faker;
 @Service
 public class BookService {
 
-	List<Book> books = new ArrayList<Book>();
-	 List<Book> fakebooks = new ArrayList<Book>();
+	static List<Book> books = new ArrayList<Book>();
+	static List<Book> fakebooks = new ArrayList<Book>();
 	
-	 {
+	static {
 		Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
 		Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
 		Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
