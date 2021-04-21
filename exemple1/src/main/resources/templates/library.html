@@ -18,6 +18,11 @@
 				<td th:text="${book.pages}"></td>
 				<td th:text="${book.year}"></td>
 				<td th:text="${book.author}"></td>
+				
+				
+				<td> <a th:href ="@{deleteBook(titleFromView=${book.title})}"
+				class="btn btn-primary">  Delete this book </a> </td>
+				
 			</tr>
 		</table>
 

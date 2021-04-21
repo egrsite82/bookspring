@@ -1,6 +1,12 @@
 package com.example.exemple1;
 
-
+//pojo Plain Old Java Object >>> bean
+//there are four ways to configure spring:
+// (1) xml and annotations are the main tools to manage the framework
+//xml >> spring legacy (3.9), spring mvc (3.0) : web.xml, dispacherServelet, servelets
+// (2) from spring (4.0) it spring boot, we use configuration java classes @configuration
+// (3) all configurations >> annotations 
+// (4) application.proporties yml
 public class Book {
 
 	private String title;

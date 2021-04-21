@@ -9,10 +9,10 @@ import com.github.javafaker.Faker;
 @Service
 public class BookService {
 
-	static List<Book> books = new ArrayList<Book>();
-	static List<Book> fakebooks = new ArrayList<Book>();
+	List<Book> books = new ArrayList<Book>();
+	 List<Book> fakebooks = new ArrayList<Book>();
 	
-	static {
+	 {
 		Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
 		Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
 		Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
@@ -29,7 +29,7 @@ public class BookService {
 
 	public List<Book> queryBooks() {
 
-		// there will be a REAL query
+		System.out.println("array books in controller  querry/n" +  this.books);
 		return books;
 	}
 
@@ -49,6 +49,21 @@ public class BookService {
 		}
 
 		return fakebooks;
+	}
+	
+	public boolean queryDeleteBook (String title) {
+		
+		for(Book bookInArray : this.books) {
+
+			if( bookInArray.getTitle().equals(title)){			
+				this.books.remove(bookInArray);
+			
+			}
+			
+			System.out.println("array books in service /n" + this.books);
+	
+		}
+	 return true;
 	}
 
 	public boolean queryAddBook (Book newbooktoadd) {
