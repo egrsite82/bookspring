@@ -78,6 +78,9 @@ public class BookService {
 			
 			System.out.println("array books in service /n" + this.books);
 	
+			//if(books.indexOf(title)!=-1) books.remove(title);
+
+			
 		}
 	 return books;
 	}
