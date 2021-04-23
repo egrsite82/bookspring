@@ -11,49 +11,49 @@ public class BookService {
 
 	static List<Book> books = new ArrayList<Book>();
 	static List<Book> fakebooks = new ArrayList<Book>();
-		
-	static {Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
-	Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
-	Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
-	Book book4 = new Book("Orlando", "yuplA15-340112", 356, 1926, "Virginia Wolf");
-	Book book5 = new Book("Programming", "RETEWRT-340112", 356, 1926, "Engelbert");
-	Book book6 = new Book("Programming api rest", "4564564564646", 356, 1926, "Boris Omar");
-	books.add(book1);
-	books.add(book2);
-	books.add(book3);
-	books.add(book4);
-	books.add(book5);
-	books.add(book6);}
-	
-	/*public List<Book> fillArray () {
+
+	static {
 		Book book1 = new Book("Anna Karenina", "BASGA15-252S38", 568, 1872, "Leon Tolstoi");
 		Book book2 = new Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf");
 		Book book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872, "Leon Tolstoi");
 		Book book4 = new Book("Orlando", "yuplA15-340112", 356, 1926, "Virginia Wolf");
 		Book book5 = new Book("Programming", "RETEWRT-340112", 356, 1926, "Engelbert");
-		Book book6 = new Book("Programming api rest", "4564564564646", 356, 1926, "Boris Omar");
+		Book book6 = new Book("Programming api rest", "456-HDS-01246", 356, 1926, "Boris Omar");
 		books.add(book1);
 		books.add(book2);
 		books.add(book3);
 		books.add(book4);
 		books.add(book5);
 		books.add(book6);
-		
-		
-		return books;
-	}*/
+	}
+
+	/*
+	 * public List<Book> fillArray() { Book book1 = new Book("Anna Karenina",
+	 * "BASGA15-252S38", 568, 1872, "Leon Tolstoi"); Book book2 = new
+	 * Book("To The LightHouse", "BSDGA15-278912", 356, 1926, "Virginia Wolf"); Book
+	 * book3 = new Book("War and Peace", "BAgyg15-250092", 528, 1872,
+	 * "Leon Tolstoi"); Book book4 = new Book("Orlando", "yuplA15-340112", 356,
+	 * 1926, "Virginia Wolf"); Book book5 = new Book("Programming",
+	 * "RETEWRT-340112", 356, 1926, "Engelbert"); Book book6 = new
+	 * Book("Programming api rest", "4564564564646", 356, 1926, "Boris Omar");
+	 * books.add(book1); books.add(book2); books.add(book3); books.add(book4);
+	 * books.add(book5); books.add(book6);
+	 * 
+	 * 
+	 * return books; }
+	 */
 
 	public List<Book> queryBooks() {
 
-		System.out.println("array books in controller  querry/n" +  this.books);
+		// System.out.println("array books in controller querry/n" + this.books);
 		return books;
 	}
 
 	public List<Book> queryFakeBooks() {
-		
+
 		int i = 0;
 		Faker newfakebook = new Faker();
-		
+
 		while (i < 10000) {
 
 			String author = newfakebook.book().author();
@@ -66,34 +66,47 @@ public class BookService {
 
 		return fakebooks;
 	}
-	
-	public List<Book> queryDeleteBook (String title) {
-		
-		for(Book bookInArray : this.books) {
 
-			if( bookInArray.getTitle().equals(title)){			
+	public List<Book> queryDeleteBook(String title) {
+
+		for (Book bookInArray : this.books) {
+
+			if (bookInArray.getTitle().equals(title)) {
 				this.books.remove(bookInArray);
 				break;
 			}
-			
-			System.out.println("array books in service /n" + this.books);
-	
-			//if(books.indexOf(title)!=-1) books.remove(title);
 
-			
+			// System.out.println("array books in service /n" + this.books);
+			// if(books.indexOf(title)!=-1) books.remove(title);
+
 		}
-	 return books;
+		return books;
 	}
 
-	public boolean queryAddBook (Book newbooktoadd) {
+	public int findBookByTitle(String title) {
+
 		
-		this.books.add(newbooktoadd);
+		 /* int index = 0; for (Book bookInArray : this.books) {
+		 * if (bookInArray.getTitle().equals(title)) break; index++; }*/
 		
+		int index=-1;
 		
-		return true;
-		
+		for(Book bookInArray : this.books) {
+			if(bookInArray.getTitle().equals(title)) {
+				index = this.books.indexOf(bookInArray);
+			}
+		}
+		return index;
 	}
-	
+
+	public boolean queryAddBook(Book newbooktoadd) {
+
+		this.books.add(newbooktoadd);
+
+		return true;
+
+	}
+
 	public int getRandomNumber(int min, int max) {
 		return (int) ((Math.random() * (max - min)) + min);
 	}
