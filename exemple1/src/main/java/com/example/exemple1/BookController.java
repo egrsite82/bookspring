@@ -69,8 +69,8 @@ public class BookController {
 		// call to service
 
 		if (bookService.findBookByTitle(titleToDelete) == -1) {
-
 			return "bookNotFound";
+			
 		} else {
 			
 			List<Book> booksUpdated = bookService.queryDeleteBook(titleToDelete);
