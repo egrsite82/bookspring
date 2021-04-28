@@ -98,6 +98,13 @@ public class BookService {
 		}
 		return index;
 	}
+	
+	public Book getBookByIndex (int index) {
+		
+		Book book = this.books.get(index);
+		
+		return book;
+	}
 
 	public boolean queryAddBook(Book newbooktoadd) {
 

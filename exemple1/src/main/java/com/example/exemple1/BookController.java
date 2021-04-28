@@ -83,6 +83,27 @@ public class BookController {
 
 		//return "library";
 	}
+	
+	@RequestMapping("/updateBook")
+	public String updateBook(@RequestParam("titleFromView") String titleToUpdate, Model model) {
+
+		int index = bookService.findBookByTitle(titleToUpdate);
+
+		if (index == -1) {
+			return "bookNotFound";
+			
+		} else {
+			
+			Book bookToUpdate = bookService.getBookByIndex(index);
+			model.addAttribute("bookfromController", bookToUpdate);
+			return "bookUpdate";
+		}
+		
+		// System.out.println("array books in controller /n" +
+		// bookService.queryBooks());
+
+		//return "library";
+	}
 
 	/*
 	 * @RequestMapping("/addBook") public String insertBook(Book book, Model model)
