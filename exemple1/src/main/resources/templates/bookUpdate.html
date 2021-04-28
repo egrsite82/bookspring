@@ -7,12 +7,14 @@
 <title>Book to update</title>
 </head>
 <body>
+
 	<form action="#"
 		th:action="@{/updateBookByTitle/{title}(title=${bookfromController.title})}"
 		th:object="${bookfromController}" method="post">
 
 		<p>
-			<label class="w3-text-gray"><b>Title</b></label> <input
+			<label class="w3-text-gray"><b>Title</b></label> 
+			<input
 				class="w3-input w3-border w3-light-grey" name="title" type="text"
 				th:field="*{title}">
 		</p>
