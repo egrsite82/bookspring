@@ -85,24 +85,25 @@ public class BookService {
 
 	public int findBookByTitle(String title) {
 
-		
-		 /* int index = 0; for (Book bookInArray : this.books) {
-		 * if (bookInArray.getTitle().equals(title)) break; index++; }*/
-		
-		int index=-1;
-		
-		for(Book bookInArray : this.books) {
-			if(bookInArray.getTitle().equals(title)) {
+		/*
+		 * int index = 0; for (Book bookInArray : this.books) { if
+		 * (bookInArray.getTitle().equals(title)) break; index++; }
+		 */
+
+		int index = -1;
+
+		for (Book bookInArray : this.books) {
+			if (bookInArray.getTitle().equals(title)) {
 				index = this.books.indexOf(bookInArray);
 			}
 		}
 		return index;
 	}
-	
-	public Book getBookByIndex (int index) {
-		
+
+	public Book getBookByIndex(int index) {
+
 		Book book = this.books.get(index);
-		
+
 		return book;
 	}
 
@@ -111,6 +112,12 @@ public class BookService {
 		this.books.add(newbooktoadd);
 
 		return true;
+
+	}
+
+	public void replaceBook(int index, Book book) {
+
+		this.books.set(index, book);
 
 	}
 
