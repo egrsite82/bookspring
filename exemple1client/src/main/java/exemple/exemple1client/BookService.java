@@ -19,7 +19,7 @@ public class BookService {
 	public Iterable<Book> queryBooks() {
 		
 		ResponseEntity<List<Book>> response = restTemplate.exchange(
-				"http://localhost:8081/webapi/allbooks",
+				"http://localhost:8081/webapi/allBooks",
 				HttpMethod.GET,
 				null,
 				new ParameterizedTypeReference<List<Book>>(){});
