@@ -13,12 +13,12 @@ import org.springframework.stereotype.Service;
 public class BookService {
 	
 	
-	RestTemplate template = new RestTemplate();
+	RestTemplate restTemplate = new RestTemplate();
 	
 	
 	public Iterable<Book> queryBooks() {
 		
-		ResponseEntity<List<Book>> response = template.exchange(
+		ResponseEntity<List<Book>> response = restTemplate.exchange(
 				"http://localhost:8081/webapi/allbooks",
 				HttpMethod.GET,
 				null,
@@ -26,10 +26,23 @@ public class BookService {
 		
 		List<Book> books = response.getBody();
 		
-		
 		return books;
 		
+	}
 
+
+	public void queryDeleteBook(String titleToDelete) {
+		
+		restTemplate.delete(
+				"http://localhost:8081/webapi/deleteBook" + "/{title}", titleToDelete);
+	}
+
+
+	public void queryAddBook(Book book) {
+		
+		restTemplate.postForObject(
+				"http://localhost:8081/webapi/addBook", book, Book.class);
+		
 	}
 
 }
