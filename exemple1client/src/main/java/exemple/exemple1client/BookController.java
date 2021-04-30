@@ -54,8 +54,6 @@ public class BookController {
 		return "updateBook";
 	}
 
-	
-
 	@PostMapping("/updateBook/{titleFromView}")
 	public String replaceBook(@PathVariable("titleFromView") String titleToUpdate, Book book) {
 		

@@ -18,15 +18,6 @@ public class BookController {
 	@Autowired
 	BookService bookService;
 
-	/*
-	 * @RequestMapping("/createBooks") public String createBooks(Model model) {
-	 * 
-	 * 
-	 * model.addAttribute("booksfromController",bookService.fillArray());
-	 * 
-	 * return "library"; }
-	 */
-
 	@RequestMapping("/allBooks")
 	public String showAllBooks(Model containerToView) {
 
@@ -126,11 +117,5 @@ public class BookController {
 		
 	}
 
-	/*@RequestMapping("/addBook") public String insertBook(Book book, Model model)
-	 * {
-	 * bookService.queryAddBook(book);
-	 * model.addAttribute("booksfromController", bookService.queryBooks());
-	 * return "library"; }
-	 */
 
 }

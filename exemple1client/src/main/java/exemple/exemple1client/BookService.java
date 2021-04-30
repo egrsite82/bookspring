@@ -13,7 +13,7 @@ public class BookService {
 
 	RestTemplate restTemplate = new RestTemplate();
 
-	public Iterable<Book> queryBooks() {
+	public List<Book> queryBooks() {
 
 		ResponseEntity<List<Book>> response = restTemplate.exchange(
 				"http://localhost:8081/webapi/allBooks",
@@ -30,7 +30,7 @@ public class BookService {
 
 	public void queryDeleteBook(String titleToDelete) {
 
-		restTemplate.delete("http://localhost:8081/webapi/deleteBook" + "/{title}",
+		restTemplate.delete("http://localhost:8081/webapi/deleteBook" + "/{titleToDelete}",
 				titleToDelete);
 	}
 

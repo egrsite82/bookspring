@@ -26,7 +26,8 @@ public class BookRestController {
 	
 	@GetMapping("/getBook/{title}")
 	public Book getBook(@PathVariable String title) {
-		 
+		
+		//to-do getBookByTitle 
 		 return bookService.getBookByIndex(bookService.findBookByTitle(title));  
 	}
 
