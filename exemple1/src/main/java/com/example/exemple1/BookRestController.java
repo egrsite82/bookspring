@@ -23,6 +23,12 @@ public class BookRestController {
 
 		return bookService.queryBooks();
 	}
+	
+	@GetMapping("/getBook/{title}")
+	public Book getBook(@PathVariable String title) {
+		 
+		 return bookService.getBookByIndex(bookService.findBookByTitle(title));  
+	}
 
 	@PostMapping(path = "/addBook", consumes = "application/json")
 	public void insertBook(@RequestBody Book book) {
@@ -55,9 +61,5 @@ public class BookRestController {
 			
 			bookService.replaceBook(index,bookToReplace);
 		}
-
-
-		
 	}
-
 }
