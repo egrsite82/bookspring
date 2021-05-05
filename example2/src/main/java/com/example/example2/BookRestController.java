@@ -13,19 +13,19 @@ import org.springframework.web.bind.annotation.RestController;
 public class BookRestController {
 
 	@Autowired
-	BookRepository bookRepository;
+	BookRepository repository;
 
 	@GetMapping("/allBooks")
 	public Iterable<Book> findAll() {
 		
-		return bookRepository.findAll();
+		return repository.findAll();
 	}
 
 	@PostMapping(path = "/addBook", consumes = "application/json")
 	public void insertBook(@RequestBody Book book) {
 		
-		
-		bookRepository.save(book);
+		System.out.println(book);
+		repository.save(book);
 		
 		
 	}
